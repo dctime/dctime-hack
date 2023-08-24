@@ -1,0 +1,49 @@
+$comment
+	File created using the following command:
+		vcd file hack.msim.vcd -direction
+$end
+$date
+	Thu Aug 24 13:57:14 2023
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module hack_vlg_vec_tst $end
+$var reg 1 ! in $end
+$var wire 1 " out $end
+
+$scope module i1 $end
+$var wire 1 # gnd $end
+$var wire 1 $ vcc $end
+$var wire 1 % unknown $end
+$var tri1 1 & devclrn $end
+$var tri1 1 ' devpor $end
+$var tri1 1 ( devoe $end
+$var wire 1 ) out~output_o $end
+$var wire 1 * in~input_o $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0"
+0#
+1$
+x%
+1&
+1'
+1(
+0)
+1*
+$end
+#30000
+0!
+0*
+1)
+1"
+#1000000

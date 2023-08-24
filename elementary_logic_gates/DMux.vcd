@@ -1,0 +1,97 @@
+$date
+	Thu Aug 24 22:18:43 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module DMux_tb $end
+$var wire 1 ! o2 $end
+$var wire 1 " o1 $end
+$var reg 1 # a $end
+$var reg 1 $ sel $end
+$scope module dmux $end
+$var wire 1 # a $end
+$var wire 1 $ sel $end
+$var reg 1 " o1 $end
+$var reg 1 ! o2 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0$
+0#
+0"
+0!
+$end
+#5
+1"
+1#
+#10
+0"
+0#
+#15
+1"
+1#
+#20
+0"
+0#
+1$
+#25
+1!
+1#
+#30
+0!
+0#
+#35
+1!
+1#
+#40
+0!
+0#
+0$
+#45
+1"
+1#
+#50
+0"
+0#
+#55
+1"
+1#
+#60
+0"
+0#
+1$
+#65
+1!
+1#
+#70
+0!
+0#
+#75
+1!
+1#
+#80
+0!
+0#
+0$
+#85
+1"
+1#
+#90
+0"
+0#
+#95
+1"
+1#
+#100
+0"
+0#
+1$

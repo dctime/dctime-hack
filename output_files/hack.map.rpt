@@ -1,5 +1,5 @@
 Analysis & Synthesis report for hack
-Sat Aug 26 15:35:43 2023
+Sat Aug 26 16:11:28 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Aug 26 15:35:43 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sat Aug 26 16:11:28 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; hack                                        ;
 ; Top-level Entity Name              ; hack                                        ;
@@ -261,7 +261,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Aug 26 15:35:31 2023
+    Info: Processing started: Sat Aug 26 16:11:17 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hack -c hack
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -273,7 +273,7 @@ Info (12021): Found 3 design units, including 3 entities, in source file hack.v
     Info (12023): Found entity 3: hack File: D:/dctime-hack/hack.v Line: 3
 Warning (12019): Can't analyze file -- file output_files/hack_tb.v is missing
 Info (12127): Elaborating entity "hack" for the top level hierarchy
-Info (12128): Elaborating entity "FullAdder" for hierarchy "FullAdder:fullAdder" File: D:/dctime-hack/hack.v Line: 7
+Info (12128): Elaborating entity "FullAdder" for hierarchy "FullAdder:fullAdder" File: D:/dctime-hack/hack.v Line: 14
 Info (12128): Elaborating entity "HalfAdder" for hierarchy "FullAdder:fullAdder|HalfAdder:halfAdder1" File: D:/dctime-hack/arithmetic/FullAdder.v Line: 11
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -283,9 +283,9 @@ Info (21057): Implemented 7 device resources after synthesis - the final resourc
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 2 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4749 megabytes
-    Info: Processing ended: Sat Aug 26 15:35:43 2023
-    Info: Elapsed time: 00:00:12
+    Info: Peak virtual memory: 4751 megabytes
+    Info: Processing ended: Sat Aug 26 16:11:28 2023
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:11
 
 

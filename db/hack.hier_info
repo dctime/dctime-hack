@@ -1,9 +1,9 @@
 |hack
-a => a.IN1
-b => b.IN1
-c => c.IN1
-sum <= FullAdder:fullAdder.sum
-carry <= FullAdder:fullAdder.carry
+a => nota.IN1
+b => notb.IN1
+c => notc.IN1
+sum << FullAdder:fullAdder.sum
+carry << FullAdder:fullAdder.carry
 
 
 |hack|FullAdder:fullAdder

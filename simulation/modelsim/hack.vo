@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "08/26/2023 15:35:55"
+// DATE "08/26/2023 16:11:37"
 
 // 
 // Device: Altera EP4CE6E22C8 Package TQFP144
@@ -41,11 +41,11 @@ output 	sum;
 output 	carry;
 
 // Design Ports Information
-// sum	=>  Location: PIN_30,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// carry	=>  Location: PIN_32,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// a	=>  Location: PIN_28,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// b	=>  Location: PIN_10,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// c	=>  Location: PIN_31,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// sum	=>  Location: PIN_84,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carry	=>  Location: PIN_85,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// a	=>  Location: PIN_89,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// b	=>  Location: PIN_90,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// c	=>  Location: PIN_91,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -65,11 +65,11 @@ initial $sdf_annotate("hack_v.sdo");
 
 wire \sum~output_o ;
 wire \carry~output_o ;
-wire \a~input_o ;
-wire \c~input_o ;
 wire \b~input_o ;
+wire \c~input_o ;
+wire \a~input_o ;
 wire \fullAdder|halfAdder2|sum~combout ;
-wire \fullAdder|carry~combout ;
+wire \fullAdder|carry~0_combout ;
 
 
 hard_block auto_generated_inst(
@@ -77,7 +77,7 @@ hard_block auto_generated_inst(
 	.devclrn(devclrn),
 	.devoe(devoe));
 
-// Location: IOOBUF_X0_Y8_N16
+// Location: IOOBUF_X34_Y9_N16
 cycloneive_io_obuf \sum~output (
 	.i(\fullAdder|halfAdder2|sum~combout ),
 	.oe(vcc),
@@ -90,9 +90,9 @@ defparam \sum~output .bus_hold = "false";
 defparam \sum~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X0_Y6_N16
+// Location: IOOBUF_X34_Y9_N9
 cycloneive_io_obuf \carry~output (
-	.i(\fullAdder|carry~combout ),
+	.i(\fullAdder|carry~0_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -103,27 +103,7 @@ defparam \carry~output .bus_hold = "false";
 defparam \carry~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOIBUF_X0_Y9_N8
-cycloneive_io_ibuf \a~input (
-	.i(a),
-	.ibar(gnd),
-	.o(\a~input_o ));
-// synopsys translate_off
-defparam \a~input .bus_hold = "false";
-defparam \a~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X0_Y7_N1
-cycloneive_io_ibuf \c~input (
-	.i(c),
-	.ibar(gnd),
-	.o(\c~input_o ));
-// synopsys translate_off
-defparam \c~input .bus_hold = "false";
-defparam \c~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X0_Y18_N15
+// Location: IOIBUF_X34_Y12_N8
 cycloneive_io_ibuf \b~input (
 	.i(b),
 	.ibar(gnd),
@@ -133,15 +113,35 @@ defparam \b~input .bus_hold = "false";
 defparam \b~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X2_Y7_N0
+// Location: IOIBUF_X34_Y12_N1
+cycloneive_io_ibuf \c~input (
+	.i(c),
+	.ibar(gnd),
+	.o(\c~input_o ));
+// synopsys translate_off
+defparam \c~input .bus_hold = "false";
+defparam \c~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y12_N15
+cycloneive_io_ibuf \a~input (
+	.i(a),
+	.ibar(gnd),
+	.o(\a~input_o ));
+// synopsys translate_off
+defparam \a~input .bus_hold = "false";
+defparam \a~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X33_Y9_N8
 cycloneive_lcell_comb \fullAdder|halfAdder2|sum (
 // Equation(s):
-// \fullAdder|halfAdder2|sum~combout  = \a~input_o  $ (\c~input_o  $ (\b~input_o ))
+// \fullAdder|halfAdder2|sum~combout  = \b~input_o  $ (\c~input_o  $ (\a~input_o ))
 
 	.dataa(gnd),
-	.datab(\a~input_o ),
+	.datab(\b~input_o ),
 	.datac(\c~input_o ),
-	.datad(\b~input_o ),
+	.datad(\a~input_o ),
 	.cin(gnd),
 	.combout(\fullAdder|halfAdder2|sum~combout ),
 	.cout());
@@ -150,21 +150,21 @@ defparam \fullAdder|halfAdder2|sum .lut_mask = 16'hC33C;
 defparam \fullAdder|halfAdder2|sum .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X2_Y7_N2
-cycloneive_lcell_comb \fullAdder|carry (
+// Location: LCCOMB_X33_Y9_N2
+cycloneive_lcell_comb \fullAdder|carry~0 (
 // Equation(s):
-// \fullAdder|carry~combout  = (\a~input_o  & ((\c~input_o ) # (\b~input_o ))) # (!\a~input_o  & (\c~input_o  & \b~input_o ))
+// \fullAdder|carry~0_combout  = (\b~input_o  & ((\c~input_o ) # (\a~input_o ))) # (!\b~input_o  & (\c~input_o  & \a~input_o ))
 
 	.dataa(gnd),
-	.datab(\a~input_o ),
+	.datab(\b~input_o ),
 	.datac(\c~input_o ),
-	.datad(\b~input_o ),
+	.datad(\a~input_o ),
 	.cin(gnd),
-	.combout(\fullAdder|carry~combout ),
+	.combout(\fullAdder|carry~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \fullAdder|carry .lut_mask = 16'hFCC0;
-defparam \fullAdder|carry .sum_lutc_input = "datac";
+defparam \fullAdder|carry~0 .lut_mask = 16'hFCC0;
+defparam \fullAdder|carry~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 assign sum = \sum~output_o ;

@@ -77,7 +77,7 @@ VCCINT                       : 5         : power  :                   : 1.2V    
 RESERVED_INPUT               : 7         :        :                   :         : 1         :                
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 8         : input  : 2.5 V             :         : 1         : N              
 nSTATUS                      : 9         :        :                   :         : 1         :                
-RESERVED_INPUT               : 10        :        :                   :         : 1         :                
+b                            : 10        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT               : 11        :        :                   :         : 1         :                
 ~ALTERA_DCLK~                : 12        : output : 2.5 V             :         : 1         : N              
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 13        : input  : 2.5 V             :         : 1         : N              
@@ -95,11 +95,11 @@ GND+                         : 24        :        :                   :         
 GND+                         : 25        :        :                   :         : 2         :                
 VCCIO2                       : 26        : power  :                   : 2.5V    : 2         :                
 GND                          : 27        : gnd    :                   :         :           :                
-RESERVED_INPUT               : 28        :        :                   :         : 2         :                
+a                            : 28        : input  : 2.5 V             :         : 2         : N              
 VCCINT                       : 29        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT               : 30        :        :                   :         : 2         :                
-RESERVED_INPUT               : 31        :        :                   :         : 2         :                
-RESERVED_INPUT               : 32        :        :                   :         : 2         :                
+sum                          : 30        : output : 2.5 V             :         : 2         : N              
+c                            : 31        : input  : 2.5 V             :         : 2         : N              
+carry                        : 32        : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT               : 33        :        :                   :         : 2         :                
 RESERVED_INPUT               : 34        :        :                   :         : 2         :                
 VCCA1                        : 35        : power  :                   : 2.5V    :           :                
@@ -154,8 +154,8 @@ RESERVED_INPUT               : 83        :        :                   :         
 RESERVED_INPUT               : 84        :        :                   :         : 5         :                
 RESERVED_INPUT               : 85        :        :                   :         : 5         :                
 RESERVED_INPUT               : 86        :        :                   :         : 5         :                
-out                          : 87        : output : 2.5 V             :         : 5         : Y              
-in                           : 88        : input  : 2.5 V             :         : 5         : Y              
+RESERVED_INPUT               : 87        :        :                   :         : 5         :                
+GND+                         : 88        :        :                   :         : 5         :                
 GND+                         : 89        :        :                   :         : 5         :                
 GND+                         : 90        :        :                   :         : 6         :                
 GND+                         : 91        :        :                   :         : 6         :                

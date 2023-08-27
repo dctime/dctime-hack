@@ -1,5 +1,5 @@
 Flow report for hack
-Sat Aug 26 16:11:37 2023
+Sat Aug 26 17:50:40 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,22 +40,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Aug 26 16:11:37 2023       ;
+; Flow Status                        ; Flow Failed - Sat Aug 26 17:50:40 2023      ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; hack                                        ;
 ; Top-level Entity Name              ; hack                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2 / 6,272 ( < 1 % )                         ;
-;     Total combinational functions  ; 2 / 6,272 ( < 1 % )                         ;
-;     Dedicated logic registers      ; 0 / 6,272 ( 0 % )                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 5 / 92 ( 5 % )                              ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
-; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
-; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/26/2023 16:11:17 ;
+; Start date & time ; 08/26/2023 17:50:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; hack                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 9413545014198.169303747711676          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 9413545014198.169304341310056          ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; hack_tb        ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; hack_tb                                ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -106,12 +106,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4751 MB             ; 00:00:10                           ;
-; Fitter               ; 00:00:03     ; 1.0                     ; 5481 MB             ; 00:00:01                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4668 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4747 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4635 MB             ; 00:00:00                           ;
-; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:13                           ;
+; Analysis & Synthesis ; 00:00:27     ; 1.0                     ; 4725 MB             ; 00:00:20                           ;
+; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:20                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -121,10 +117,6 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; DCtime           ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DCtime           ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DCtime           ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DCtime           ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DCtime           ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -132,10 +124,6 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off hack -c hack
-quartus_fit --read_settings_files=off --write_settings_files=off hack -c hack
-quartus_asm --read_settings_files=off --write_settings_files=off hack -c hack
-quartus_sta hack -c hack
-quartus_eda --read_settings_files=off --write_settings_files=off hack -c hack
 
 
 

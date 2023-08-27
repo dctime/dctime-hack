@@ -1,16 +1,9 @@
-`include "arithmetic/FullAdder.v"
+`include "arithmetic/Incrementor16.v"
 
 module hack(
-	input a, b, c,
-	output sum , carry
+	input [15:0] in,
+	output [15:0] out
 );
-	wire nota, notb, notc, notsum, notcarry;
-	assign nota = ~a;
-	assign notb = ~b;
-	assign notc = ~c;
-	assign sum = ~notsum;
-	assign carry = ~notcarry;
-	
-	FullAdder fullAdder (.a(nota), .b(notb), .c(notc), .sum(notsum), .carry(notcarry));
+Incrementor16 incrementor16 (.in(in), .out(out));
 	
 endmodule

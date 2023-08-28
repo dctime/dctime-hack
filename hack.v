@@ -1,9 +1,11 @@
-`include "arithmetic/Incrementor16.v"
+`include "registers_and_rams/RAM64.v"
 
 module hack(
 	input [15:0] in,
-	output [15:0] out
+   input [8:0] addr,
+   input load, clk,
+   output [15:0] out
 );
-Incrementor16 incrementor16 (.in(in), .out(out));
+RAM64 ram64 (.in(in), .addr(addr), .load(load), .clk(clk), .out(out));
 	
 endmodule

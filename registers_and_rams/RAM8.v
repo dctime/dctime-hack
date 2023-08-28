@@ -14,7 +14,7 @@ genvar indexCounter;
 reg [3:0] loadCounter; //Max 7
 
 generate
-    for (indexCounter = 0; indexCounter < 8; indexCounter = indexCounter + 1) begin
+    for (indexCounter = 0; indexCounter < 8; indexCounter = indexCounter + 1) begin : Register16toRAM8
         Register16 register16 (.in(in), .load(registerLoad[indexCounter]), .clk(clk), .out(registerOut[indexCounter]));
     end
 endgenerate

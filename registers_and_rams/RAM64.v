@@ -16,7 +16,7 @@ assign ramAddr = addr [5:3];
 
 genvar RAMCounter;
 generate
-    for (RAMCounter = 0; RAMCounter < 8; RAMCounter = RAMCounter + 1) begin
+    for (RAMCounter = 0; RAMCounter < 8; RAMCounter = RAMCounter + 1) begin : RAM8to64
        RAM8 ram8 (.in(in), .addr(allAddr), .load(loads[RAMCounter]), .clk(clk), .out(outs[RAMCounter]));
     end
 endgenerate

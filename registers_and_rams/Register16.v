@@ -8,7 +8,7 @@ module Register16 (
 
 genvar registerCounter;
 generate
-    for (registerCounter = 0; registerCounter < 16; registerCounter = registerCounter + 1) begin
+    for (registerCounter = 0; registerCounter < 16; registerCounter = registerCounter + 1) begin : Register1to16
         Register1 register1 (.in(in[registerCounter]), .out(out[registerCounter]), .load(load), .clk(clk));
     end
 endgenerate

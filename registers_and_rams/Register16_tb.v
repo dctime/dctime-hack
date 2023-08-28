@@ -2,7 +2,7 @@
 
 module Register16_tb;
 
-reg [15:0] in = 16'h0000;
+reg [15:0] in = 16'habcd;
 reg load = 0, clk = 0;
 wire [15:0] out;
 

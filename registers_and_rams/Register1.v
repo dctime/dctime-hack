@@ -2,7 +2,7 @@ module Register1 (
     input in,
     input load,
     input clk,
-    output reg out
+    output reg out = 0
 );
 
 always @(posedge clk ) begin

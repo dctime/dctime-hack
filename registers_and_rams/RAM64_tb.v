@@ -22,6 +22,7 @@ module RAM64_tb;
 
     always begin
         #2 load = ~load;
+        #6 load = load;
     end
 
     always begin
